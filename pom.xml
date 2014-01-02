@@ -11,6 +11,7 @@
     <module>baldy-commons-web</module>
     <module>baldy-commons-models</module>
     <module>baldy-commons-security</module>
+    <module>baldy-commons-test</module>
   </modules>
 
   <properties>
