@@ -1,4 +1,4 @@
-package baldy.commons.security.services;
+package com.baldy.commons.security.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

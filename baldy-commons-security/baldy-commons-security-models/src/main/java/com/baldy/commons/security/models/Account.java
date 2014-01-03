@@ -1,4 +1,4 @@
-package baldy.commons.security.models;
+package com.baldy.commons.security.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

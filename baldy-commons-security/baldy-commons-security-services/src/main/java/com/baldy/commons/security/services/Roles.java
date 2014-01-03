@@ -1,6 +1,6 @@
-package baldy.commons.security.services;
+package com.baldy.commons.security.services;
 
-import baldy.commons.security.models.Account;
+import com.baldy.commons.security.models.Account;
 
 /**
  * HttpConfiguration automatically inserts 'ROLE_':

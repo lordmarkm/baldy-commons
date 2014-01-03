@@ -1,4 +1,4 @@
-package baldy.commons.web.controller;
+package com.baldy.commons.web.controller;
 
 import java.security.Principal;
 

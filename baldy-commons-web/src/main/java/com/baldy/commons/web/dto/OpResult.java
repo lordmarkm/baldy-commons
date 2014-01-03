@@ -1,6 +1,6 @@
-package baldy.commons.web.dto;
+package com.baldy.commons.web.dto;
 
-import static baldy.commons.web.dto.OpResult.OpStatus.*;
+import static com.baldy.commons.web.dto.OpResult.OpStatus.*;
 
 import org.springframework.core.style.ToStringCreator;
 

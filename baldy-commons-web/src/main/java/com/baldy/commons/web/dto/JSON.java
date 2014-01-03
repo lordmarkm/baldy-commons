@@ -1,4 +1,4 @@
-package baldy.commons.web.dto;
+package com.baldy.commons.web.dto;
 
 import java.util.HashMap;
 
