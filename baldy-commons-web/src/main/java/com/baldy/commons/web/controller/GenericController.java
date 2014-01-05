@@ -9,16 +9,21 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 /**
  * @author mbmartinez
  */
 public abstract class GenericController {
 	
+	protected ModelAndView redirect(String target) {
+		return new ModelAndView(new RedirectView(target));
+	}
+
 	protected String name(Principal principal) {
 		return null == principal ? "Anonymous" : principal.getName();
 	}
-
+	
 	protected ModelAndView mav() {
 		return new ModelAndView();
 	}
