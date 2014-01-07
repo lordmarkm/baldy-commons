@@ -7,5 +7,5 @@ public interface Commodity {
 
     String getName();
     String getDescription();
-    
+
 }

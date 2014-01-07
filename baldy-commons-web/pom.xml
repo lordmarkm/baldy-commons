@@ -30,6 +30,12 @@
       <artifactId>spring-context-support</artifactId>
     </dependency>
 
+    <!-- JACKSON -->
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+    </dependency>
+
 		<!-- FREEMARKER -->
 		<dependency>
 			<groupId>org.freemarker</groupId>
