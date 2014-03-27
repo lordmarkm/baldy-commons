@@ -15,52 +15,52 @@ import org.springframework.web.servlet.view.RedirectView;
  * @author mbmartinez
  */
 public abstract class GenericController {
-	
-	protected ModelAndView redirect(String target) {
-		return new ModelAndView(new RedirectView(target));
-	}
 
-	protected String name(Principal principal) {
-		return null == principal ? "Anonymous" : principal.getName();
-	}
-	
-	protected ModelAndView mav() {
-		return new ModelAndView();
-	}
-	
-	protected ModelAndView mav(String viewname) {
-		return new ModelAndView(viewname);
-	}
-	
-	protected String firstError(BindingResult result) {
-		Validate.isTrue(result.hasErrors());
+    protected ModelAndView redirect(String target) {
+        return new ModelAndView(new RedirectView(target));
+    }
+
+    protected String name(Principal principal) {
+        return null == principal ? "Anonymous" : principal.getName();
+    }
+
+    protected ModelAndView mav() {
+        return new ModelAndView();
+    }
+
+    protected ModelAndView mav(String viewname) {
+        return new ModelAndView(viewname);
+    }
+
+    protected String firstError(BindingResult result) {
+        Validate.isTrue(result.hasErrors());
         ObjectError error = result.getAllErrors().iterator().next();
         return error.getDefaultMessage();
-	}
-	
-	protected String basic(String src) {
-		Validate.notNull(src);
-		src = src.trim().replaceAll("[\r\n]+", "br2nl");
-		src = Jsoup.clean(src, Whitelist.basic());
-		return src.replaceAll("br2nl", "\n"); 
-	}
-	
-	protected int getInt(WebRequest request, String paramName) {
-		String strVal = request.getParameter(paramName);
-		Validate.notNull(strVal, paramName + " not found in request!");
-		return Integer.parseInt(strVal);
-	}
-	
-	protected String getString(WebRequest request, String paramName) {
-		return getString(request, paramName, true);
-	}
-	
+    }
+
+    protected String basic(String src) {
+        Validate.notNull(src);
+        src = src.trim().replaceAll("[\r\n]+", "br2nl");
+        src = Jsoup.clean(src, Whitelist.basic());
+        return src.replaceAll("br2nl", "\n"); 
+    }
+
+    protected int getInt(WebRequest request, String paramName) {
+        String strVal = request.getParameter(paramName);
+        Validate.notNull(strVal, paramName + " not found in request!");
+        return Integer.parseInt(strVal);
+    }
+
+    protected String getString(WebRequest request, String paramName) {
+        return getString(request, paramName, true);
+    }
+
     protected String getString(WebRequest request, String paramName, boolean notnull) {
-		String strVal = request.getParameter(paramName);
-		if(notnull) {
-			Validate.notNull(strVal, paramName + " not found in request!");
-		}
-		return strVal;
-	}
-	
+        String strVal = request.getParameter(paramName);
+        if(notnull) {
+            Validate.notNull(strVal, paramName + " not found in request!");
+        }
+        return strVal;
+    }
+
 }
