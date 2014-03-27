@@ -40,7 +40,7 @@
     <cglib.version>3.1</cglib.version>
 
     <!-- VIEW -->
-    <freemarker.version>2.3.14</freemarker.version>
+    <freemarker.version>2.3.20</freemarker.version>
 
     <!-- LOGGING -->
     <logback.version>1.0.9</logback.version>
