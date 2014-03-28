@@ -12,18 +12,18 @@ import org.springframework.security.core.Authentication;
  */
 public class AuthenticationSuccessListener implements ApplicationListener<InteractiveAuthenticationSuccessEvent> {
 
-	private static Logger log = LoggerFactory.getLogger(AuthenticationSuccessListener.class);
+    private static Logger log = LoggerFactory.getLogger(AuthenticationSuccessListener.class);
 
-	@Override
-	public void onApplicationEvent(InteractiveAuthenticationSuccessEvent event) {
+    @Override
+    public void onApplicationEvent(InteractiveAuthenticationSuccessEvent event) {
 
-	    Authentication auth = event.getAuthentication();
-		log.info("Authentication success event. auth={}", auth);
+        Authentication auth = event.getAuthentication();
+        log.info("Authentication success event. auth={}", auth);
 
-//      do this at on the application level
-//		User user = (User) auth.getPrincipal();
-//		accounts.updateLastLogin(user.getUsername());
+        //do this at on the application level
+        //User user = (User) auth.getPrincipal();
+        //accounts.updateLastLogin(user.getUsername());
 
-	}
+    }
 
 }

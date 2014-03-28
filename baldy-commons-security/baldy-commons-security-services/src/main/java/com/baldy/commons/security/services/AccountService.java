@@ -11,6 +11,6 @@ import com.baldy.commons.security.models.Account;
  */
 public interface AccountService extends JpaRepository<Account, Long> {
 
-	Account findByUsername(String name);
+    Account findByUsername(String name);
 
 }
