@@ -11,11 +11,11 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 @Configuration
 public class FileUploadConfig {
 
-	@Bean
-	public MultipartResolver multipartResolver() {
-		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-		multipartResolver.setMaxUploadSize(20480); //20 kb
-		return multipartResolver;
-	}
+    @Bean
+    public MultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+        multipartResolver.setMaxUploadSize(20480); //20 kb
+        return multipartResolver;
+    }
 
 }

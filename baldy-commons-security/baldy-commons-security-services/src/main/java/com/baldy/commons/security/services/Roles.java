@@ -10,21 +10,21 @@ import com.baldy.commons.security.models.Account;
  */
 public class Roles {
 
-	public static final String ADMIN = "ADMIN";
+    public static final String ADMIN = "ADMIN";
 
-	public static final String ROLE_USER = "ROLE_USER";
-	public static final String ROLE_ADMIN = "ROLE_ADMIN";
+    public static final String ROLE_USER = "ROLE_USER";
+    public static final String ROLE_ADMIN = "ROLE_ADMIN";
 
-	public static boolean hasRole(Account account, String role) {
-		if(null == account) {
-			return false;
-		}
+    public static boolean hasRole(Account account, String role) {
+        if(null == account) {
+            return false;
+        }
 
-		String[] auths = account.getAuthorities().split(", ");
-		for(String auth : auths) {
-			if(auth.trim().equals(role)) return true;
-		}
-		return false;
-	}
-	
+        String[] auths = account.getAuthorities().split(", ");
+        for(String auth : auths) {
+            if(auth.trim().equals(role)) return true;
+        }
+        return false;
+    }
+
 }

@@ -6,4 +6,4 @@
 /**
  * Contains the API documentation configuration classes.
  */
-package com.p2p.resourcedoc.config;
+package com.baldy.commons.resourcedoc.config;

@@ -1,5 +1,5 @@
 // swagger.js
-// version 2.0.27
+// version 2.0.26
 
 var __bind = function(fn, me){
   return function(){
@@ -884,6 +884,7 @@ SwaggerOperation.prototype.pathXml = function() {
 
 SwaggerOperation.prototype.encodePathParam = function(pathParam) {
   var encParts, part, parts, _i, _len;
+  pathParam = pathParam.toString();
   if (pathParam.indexOf("/") === -1) {
     return encodeURIComponent(pathParam);
   } else {
