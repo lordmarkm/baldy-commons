@@ -1,5 +1,18 @@
 package com.baldy.commons.resourcedoc.config;
 
+import static com.google.common.collect.Lists.newArrayList;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+
 import com.mangofactory.swagger.configuration.JacksonScalaSupport;
 import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
 import com.mangofactory.swagger.configuration.SpringSwaggerModelConfig;
@@ -8,20 +21,12 @@ import com.mangofactory.swagger.core.DefaultSwaggerPathProvider;
 import com.mangofactory.swagger.core.SwaggerApiResourceListing;
 import com.mangofactory.swagger.core.SwaggerPathProvider;
 import com.mangofactory.swagger.scanners.ApiListingReferenceScanner;
-import com.wordnik.swagger.model.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import static com.google.common.collect.Lists.newArrayList;
+import com.wordnik.swagger.model.ApiInfo;
+import com.wordnik.swagger.model.AuthorizationScope;
+import com.wordnik.swagger.model.AuthorizationType;
+import com.wordnik.swagger.model.GrantType;
+import com.wordnik.swagger.model.ImplicitGrant;
+import com.wordnik.swagger.model.LoginEndpoint;
 
 /**
  * http://www.therichwebexperience.com/blog/matt_raible/2014/03/documenting_your_spring_api_with_swagger
@@ -32,7 +37,7 @@ import static com.google.common.collect.Lists.newArrayList;
 @PropertySource("classpath:swagger.properties")
 public class SwaggerConfig {
 
-    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList("accounts/", "/accounts/.*");
+    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList("accounts/", "/accounts/.*", "expansion/", "/expansion/.*");
     public static final String SWAGGER_GROUP = "mobile-api";
 
     @Autowired
