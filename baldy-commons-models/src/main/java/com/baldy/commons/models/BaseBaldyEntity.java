@@ -1,6 +1,8 @@
 package com.baldy.commons.models;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -10,6 +12,10 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class BaseBaldyEntity {
 
+    @Id
+    @GeneratedValue
+    protected Long id;
+    
     @Column
     protected String name;
 
@@ -27,6 +33,12 @@ public abstract class BaseBaldyEntity {
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

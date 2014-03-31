@@ -13,6 +13,7 @@
     <module>baldy-commons-security</module>
     <module>baldy-commons-test</module>
     <module>baldy-commons-resourcedoc</module>
+    <module>baldy-commons-data-mysql</module>
   </modules>
 
   <properties>
