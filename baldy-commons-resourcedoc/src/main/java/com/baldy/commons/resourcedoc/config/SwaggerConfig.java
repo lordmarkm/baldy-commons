@@ -37,7 +37,11 @@ import com.wordnik.swagger.model.LoginEndpoint;
 @PropertySource("classpath:swagger.properties")
 public class SwaggerConfig {
 
-    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList("accounts/", "/accounts/.*", "expansion/", "/expansion/.*");
+    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList(
+            "/accounts", "/accounts/.*", 
+            "/expansion", "/expansion/.*",
+            "/parse", "/parse/.*"
+            );
     public static final String SWAGGER_GROUP = "mobile-api";
 
     @Autowired
@@ -86,7 +90,7 @@ public class SwaggerConfig {
                 "matt@raibledesigns.com",
                 "Apache 2.0",
                 "http://www.apache.org/licenses/LICENSE-2.0.html"
-        );
+                );
         return apiInfo;
     }
 
