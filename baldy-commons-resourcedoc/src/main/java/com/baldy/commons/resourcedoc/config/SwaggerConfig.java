@@ -3,7 +3,6 @@ package com.baldy.commons.resourcedoc.config;
 import static com.google.common.collect.Lists.newArrayList;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,13 +34,14 @@ import com.wordnik.swagger.model.LoginEndpoint;
 @Configuration
 @ComponentScan(basePackages = "com.mangofactory.swagger")
 @PropertySource("classpath:swagger.properties")
-public class SwaggerConfig {
+public abstract class SwaggerConfig {
 
-    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList(
-            "/accounts", "/accounts/.*", 
-            "/expansion", "/expansion/.*",
-            "/parse", "/parse/.*"
-            );
+//    public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList(
+//            "/accounts", "/accounts/.*", 
+//            "/expansion", "/expansion/.*",
+//            "/parse", "/parse/.*"
+//            );
+
     public static final String SWAGGER_GROUP = "mobile-api";
 
     @Autowired
@@ -52,6 +52,12 @@ public class SwaggerConfig {
 
     @Autowired
     private SpringSwaggerModelConfig springSwaggerModelConfig;
+
+    /**
+     * Implement this yo.
+     * @return
+     */
+    public abstract List<String> getPatterns();
 
     /**
      * Adds the jackson scala module to the MappingJackson2HttpMessageConverter registered with spring
@@ -148,7 +154,7 @@ public class SwaggerConfig {
         apiListingReferenceScanner.setSwaggerGroup(SWAGGER_GROUP);
 
         //Only include paths that match the supplied regular expressions
-        apiListingReferenceScanner.setIncludePatterns(DEFAULT_INCLUDE_PATTERNS);
+        apiListingReferenceScanner.setIncludePatterns(getPatterns());
 
         return apiListingReferenceScanner;
     }
