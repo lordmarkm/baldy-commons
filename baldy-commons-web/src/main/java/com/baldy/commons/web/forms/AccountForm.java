@@ -32,6 +32,7 @@ public class AccountForm {
         return new ToStringCreator(this)
         .append("id", id)
         .append("username", username)
+        .append("password", null == password || password.length() < 1 ? "None" : "[protected]")
         .toString();
     }
 
