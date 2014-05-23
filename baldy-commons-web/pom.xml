@@ -10,7 +10,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <groupId>baldy.commons.web</groupId>
+  <groupId>baldy.commons</groupId>
   <artifactId>baldy-commons-web</artifactId>
   <name>Baldy :: Commons :: Web</name>
 

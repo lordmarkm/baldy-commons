@@ -14,6 +14,7 @@
     <module>baldy-commons-test</module>
     <module>baldy-commons-resourcedoc</module>
     <module>baldy-commons-data-mysql</module>
+    <module>baldy-commons-dtos</module>
   </modules>
 
   <properties>
@@ -38,6 +39,8 @@
     <swagger.version>0.8.2</swagger.version>
     <servlet.version>3.1.0</servlet.version>
     <cglib.version>3.1</cglib.version>
+    <guava.version>17.0</guava.version>
+    <dozer.version>5.5.1</dozer.version>
 
     <!-- VIEW -->
     <freemarker.version>2.3.20</freemarker.version>
@@ -236,6 +239,20 @@
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
         <version>${commons.fileupload.version}</version>
+      </dependency>
+
+      <!-- Guava -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+
+      <!-- Dozer -->
+      <dependency>
+        <groupId>net.sf.dozer</groupId>
+        <artifactId>dozer</artifactId>
+        <version>${dozer.version}</version>
       </dependency>
 
       <!-- TEST -->

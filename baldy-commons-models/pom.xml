@@ -26,6 +26,12 @@
       <artifactId>hibernate-entitymanager</artifactId>
     </dependency>
 
+    <!-- Guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+    </dependency>
+
     <!-- Temporal -->
     <dependency>
       <groupId>joda-time</groupId>
