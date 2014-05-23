@@ -11,6 +11,12 @@
 
   <dependencies>
 
+    <!-- Project -->
+    <dependency>
+      <groupId>baldy.commons</groupId>
+      <artifactId>baldy-commons-models</artifactId>
+    </dependency>
+
     <!-- SPRING -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -53,8 +59,6 @@
     <dependency>
       <groupId>baldy.commons</groupId>
       <artifactId>baldy-commons-test</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>

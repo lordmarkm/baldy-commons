@@ -3,11 +3,13 @@ package com.baldy.commons.models.firm;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
 /**
  * @author mbmartinez
  * Item - an Article that is sold
  */
+@Entity(name = "ARTICLE")
 public class Item extends Article {
 
     @Column(name = "PRODUCTION_PRICE")
