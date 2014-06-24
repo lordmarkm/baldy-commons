@@ -42,6 +42,12 @@
       <artifactId>usertype.core</artifactId>
       <version>3.0.0.CR1</version>
     </dependency>
+    
+    <!-- Test -->
+    <dependency>
+      <groupId>baldy.commons</groupId>
+      <artifactId>baldy-commons-test</artifactId>
+    </dependency>
   </dependencies>
 
 </project>

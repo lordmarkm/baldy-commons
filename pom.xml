@@ -15,6 +15,7 @@
     <module>baldy-commons-resourcedoc</module>
     <module>baldy-commons-data-mysql</module>
     <module>baldy-commons-dtos</module>
+    <module>baldy-commons-services</module>
   </modules>
 
   <properties>
