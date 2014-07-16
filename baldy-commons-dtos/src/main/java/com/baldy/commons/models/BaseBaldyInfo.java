@@ -1,4 +1,4 @@
-package com.baldy.commons.models.firm;
+package com.baldy.commons.models;
 
 /**
  * @author mbmartinez
