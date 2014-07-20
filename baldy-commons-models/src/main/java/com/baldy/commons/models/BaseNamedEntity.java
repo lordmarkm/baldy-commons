@@ -1,12 +1,15 @@
 package com.baldy.commons.models;
 
-/**
- * @author mbmartinez
- */
-public class BaseBaldyInfo {
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 
-    protected Long id;
+@MappedSuperclass
+public abstract class BaseNamedEntity extends BaseEntity {
+
+    @Column
     protected String name;
+
+    @Column
     protected String description;
 
     public String getName() {
@@ -21,11 +24,4 @@ public class BaseBaldyInfo {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-
 }
