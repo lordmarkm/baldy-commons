@@ -1,34 +1,21 @@
 package com.baldy.commons.models.proper;
 
 import javax.persistence.Embedded;
-import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 
-import org.springframework.util.ObjectUtils;
+import com.baldy.commons.models.BaseEntity;
 
-import com.baldy.commons.models.BaseBaldyEntity;
-
-@Entity(name = "PERSON")
-public class Person extends BaseBaldyEntity {
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Person extends BaseEntity {
 
     @Embedded
-    private Name properName;
+    private Name name;
 
     @Embedded
     private Address address;
-
-    @Override
-    public String toString() {
-        return ObjectUtils.nullSafeToString(properName)
-                + ", " + ObjectUtils.nullSafeToString(address);
-    }
-
-    public Name getProperName() {
-        return properName;
-    }
-
-    public void setProperName(Name properName) {
-        this.properName = properName;
-    }
 
     public Address getAddress() {
         return address;
@@ -36,6 +23,14 @@ public class Person extends BaseBaldyEntity {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
     }
 
 }
