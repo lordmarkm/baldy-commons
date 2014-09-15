@@ -16,7 +16,17 @@ public class Name {
     private String surname;
 
     public String toString() {
-        return surname + ", " + givenName + " " + middleName;
+        StringBuilder string = new StringBuilder();
+        if (null != surname) {
+            string.append(surname).append(", ");
+        }
+        if (null != givenName) {
+            string.append(givenName).append(" ");
+        }
+        if (null != middleName) {
+            string.append(middleName);
+        }
+        return string.toString();
     }
 
     public String getGivenName() {
