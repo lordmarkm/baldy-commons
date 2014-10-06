@@ -11,8 +11,16 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>net.sf.dozer</groupId>
       <artifactId>dozer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
     </dependency>
   </dependencies>
 </project>
