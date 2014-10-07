@@ -16,6 +16,7 @@
     <module>baldy-commons-data-mysql</module>
     <module>baldy-commons-dtos</module>
     <module>baldy-commons-services</module>
+    <module>baldy-commons-data-postgresql</module>
   </modules>
 
   <properties>
