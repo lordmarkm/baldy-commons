@@ -6,7 +6,7 @@
   <parent>
     <artifactId>baldy-commons</artifactId>
     <groupId>baldy.commons</groupId>
-    <version>2.0</version>
+    <version>3.0</version>
     <relativePath>..</relativePath>
   </parent>
 
