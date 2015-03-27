@@ -3,7 +3,7 @@
   <parent>
     <artifactId>baldy-commons</artifactId>
     <groupId>baldy.commons</groupId>
-    <version>3.0</version>
+    <version>3.1</version>
     <relativePath>..</relativePath>
   </parent>
   <groupId>baldy.commons.security</groupId>

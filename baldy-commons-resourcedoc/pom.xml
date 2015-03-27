@@ -4,7 +4,7 @@
   <parent>
     <groupId>baldy.commons</groupId>
     <artifactId>baldy-commons</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
   </parent>
   <artifactId>baldy-commons-resourcedoc</artifactId>
   <packaging>war</packaging>
