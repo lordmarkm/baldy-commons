@@ -1,12 +1,17 @@
 package com.baldy.commons.models.proper;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Address {
 
+    @Column(name = "street")
     private String street;
+
+    @Column(name = "city")
     private String city;
+
     private String province;
     private String zip;
 
