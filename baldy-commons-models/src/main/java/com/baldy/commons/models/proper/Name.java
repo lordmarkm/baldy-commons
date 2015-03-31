@@ -6,13 +6,13 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Name {
 
-    @Column(name = "given_name")
+    @Column(name = "GIVEN_NAME")
     private String givenName;
 
-    @Column(name = "middle_name")
+    @Column(name = "MIDDLE_NAME")
     private String middleName;
 
-    @Column(name = "surname")
+    @Column(name = "SURNAME")
     private String surname;
 
     public String toString() {
