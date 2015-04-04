@@ -13,21 +13,6 @@
   <artifactId>baldy-commons-security-services</artifactId>
   <name>Baldy :: Commons :: Security :: Services</name>
 
-  <!-- Additional repository for spring-security-javaconfig -->
-  <repositories>
-    <repository>
-      <id>spring-libs-snapshot</id>
-      <name>Spring Snapshot Repository</name>
-      <url>http://repo.springsource.org/snapshot</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <dependencies>
     <!-- Project -->
     <dependency>
@@ -42,12 +27,6 @@
       <artifactId>spring-data-jpa</artifactId>
     </dependency>
 
-    <!-- Spring Security + Javaconfig -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-javaconfig</artifactId>
-      <version>1.0.0.CI-SNAPSHOT</version>
-    </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-expression</artifactId>
