@@ -6,19 +6,19 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Address {
 
-    @Column(name = "LINE1")
+    @Column(name = "ADDR_LINE1")
     private String addressLine1;
 
-    @Column(name = "LINE2")
+    @Column(name = "ADDR_LINE2")
     private String addressLine2;
 
-    @Column(name = "city")
+    @Column(name = "ADDR_CITY")
     private String city;
 
-    @Column(name = "PROVINCE")
+    @Column(name = "ADDR_PROVINCE")
     private String province;
 
-    @Column(name = "ZIP")
+    @Column(name = "ADDR_ZIP")
     private String zip;
 
     public String getAddressLine1() {
